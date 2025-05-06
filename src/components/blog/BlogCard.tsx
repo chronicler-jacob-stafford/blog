@@ -1,0 +1,49 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import Blog from '@/types/Blog';
+import { Badge } from '@/components/ui/badge';
+import { useNavigate } from 'react-router-dom';
+
+interface BlogCardProps {
+  blog: Blog;
+}
+
+export default function BlogCard({ blog } : BlogCardProps) {
+  const navigate = useNavigate();
+
+  return (
+  <Card 
+    className="justify-between
+     hover:border-green-300 hover:scale-[1.02] 
+      max-w-[300px]
+      overflow-hidden p-0"
+    onClick={() => void navigate(`blog/${blog.contentId}`)}
+  >
+    <CardHeader className="p-4 pb-2">
+      <CardTitle>{blog.title}</CardTitle>
+      <CardDescription>{blog.description}</CardDescription>
+      <div className="flex gap-2">
+        {
+          blog.badges?.map((badge, i) => 
+          <Badge key={badge} variant={i == 0 ? 'default' : 'secondary'}>{badge}</Badge>
+          )
+        }
+      </div>
+    </CardHeader>
+
+    <CardContent className="p-4 pt-0">
+      {blog.description}
+    </CardContent>
+
+    <img
+      src={blog.imageUrl}
+      className=" w-full h-40 object-cover"
+    />
+</Card>
+  );
+}
