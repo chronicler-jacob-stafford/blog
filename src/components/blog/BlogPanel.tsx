@@ -11,7 +11,7 @@ export default function BlogPanel() {
 
  return (
   <div className='grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-4 place-items-center'>
-      {blogs && blogs.map((blog) => <BlogCard key={blog.contentId} blog={blog} /> )}
+      {blogs && blogs.map((blog) => <BlogCard key={blog.id} blog={blog} /> )}
   </div>
  );
 }

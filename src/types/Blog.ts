@@ -3,8 +3,9 @@ type Blog = {
   imageUrl: string;
   datePublished: Date,
   description: string;
-  contentId: string;
+  id: string;
   badges?: string[];
+  content: React.ReactElement<any>
 }
 
 export default Blog;

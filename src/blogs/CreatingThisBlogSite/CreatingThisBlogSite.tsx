@@ -5,13 +5,13 @@ const blog: Blog = {
   title: 'Shadcn UI for boilerplate patterns?',
   imageUrl: '' ,
   description: 'My recommendation to use Shadcn to kickstart you Pattern Library.',
-  contentId: 'godot',
+  id: '1',
   badges: ['Pattern Library', 'Shadcn', 'React'],
-  datePublished:  new Date()
+  datePublished:  new Date(),
+  content: <BlogPage />
 };
 
-export default function BlogPage() {
-
+function BlogPage() {
   return (
     <div>
         <BlogHeader blog={blog}/>
@@ -19,4 +19,4 @@ export default function BlogPage() {
   );
 }
 
-export {blog};
+export default blog;
