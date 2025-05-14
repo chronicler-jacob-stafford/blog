@@ -20,13 +20,12 @@ export default function BlogCard({ blog } : BlogCardProps) {
   <Card 
     className="justify-between
      hover:border-green-300 hover:scale-[1.02] 
-      max-w-[300px]
+      w-[300px]
       overflow-hidden p-0"
     onClick={() => void navigate(`blog/${blog.id}`)}
   >
-    <CardHeader className="p-4 pb-2">
+    <CardHeader className="flex flex-col gap-4 p-4 pb-2">
       <CardTitle>{blog.title}</CardTitle>
-      <CardDescription>{blog.description}</CardDescription>
       <div className="flex gap-2">
         {
           blog.badges?.map((badge, i) => 
@@ -36,9 +35,7 @@ export default function BlogCard({ blog } : BlogCardProps) {
       </div>
     </CardHeader>
 
-    <CardContent className="p-4 pt-0">
-      {blog.description}
-    </CardContent>
+    <CardDescription className="p-4 pt-0"> {blog.description}</CardDescription>
 
     <img
       src={blog.imageUrl}

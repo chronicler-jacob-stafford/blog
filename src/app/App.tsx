@@ -3,7 +3,6 @@ import HomePage from '@/pages/HomePage';
 import BlogPage from '@/pages/BlogPage';
 import { Route, Routes } from 'react-router-dom';
 import PageWrapper from './PageWrapper';
-import blogRepo from '@/blogs/BlogRepo';
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
       <PageWrapper>
           <Routes>
             <Route path="/" element={<HomePage/>} />
-            <Route path="/blogs/:blogId" element={<BlogPage/>} />
+            <Route path="/blog/:blogId" element={<BlogPage/>} />
           </Routes>
       </PageWrapper>
     </ThemeProvider>

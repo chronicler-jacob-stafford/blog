@@ -11,11 +11,13 @@ export default function BlogHeader({blog}: BlogHeaderProps) {
     <div className="flex flex-col gap-2">
       <Title> {blog.title} </Title>
       <Date date={blog.datePublished}/>
-      {
-        blog.badges?.map((badge, i) => 
-        <Badge key={badge} variant={i == 0 ? 'default' : 'secondary'}>{badge}</Badge>
-        )
-      }
+      <div className="flex gap-2">
+        {
+          blog.badges?.map((badge, i) => 
+          <Badge key={badge} variant={i == 0 ? 'default' : 'secondary'}>{badge}</Badge>
+          )
+        }
+      </div>
     </div>
   );
 }
