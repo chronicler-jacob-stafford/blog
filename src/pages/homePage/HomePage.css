@@ -1,0 +1,12 @@
+.dash {
+    display: block; /* Important! */
+    transition: width 0.3s ease, height 0.3s ease;
+    width: 2rem;
+    height: 1px;
+    background-color: currentColor;
+}
+
+a:hover .dash {
+    width: 4rem;
+    height: 1px;
+}

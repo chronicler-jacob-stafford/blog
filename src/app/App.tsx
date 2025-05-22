@@ -1,8 +1,9 @@
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
-import HomePage from '@/pages/HomePage';
+import HomePage from '@/pages/homePage/HomePage';
 import BlogPage from '@/pages/BlogPage';
 import { Route, Routes } from 'react-router-dom';
-import PageWrapper from './PageWrapper';
+import PageWrapper from '../pages/PageWrapper';
+import PageNotFound from '@/pages/PageNotFound';
 
 function App() {
   return (
@@ -11,10 +12,11 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage/>} />
             <Route path="/blog/:blogId" element={<BlogPage/>} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
       </PageWrapper>
     </ThemeProvider>
   );
 }
 
-export default App; 
+export default App;

@@ -1,4 +1,3 @@
-import { InlineCode } from "@/components/ui/inline-code";
 import Blog from "@/types/Blog";
 import image from '@/assets/tailwind.jfif'
 import { CodeBlock } from "@/components/ui/code-block";
@@ -20,7 +19,11 @@ function BlogPage() {
       <p> 
         I've always wanted a blog to ramble about the riff-raff of the full-stack experience. Why not simply post on LinkedIn, Medium, all the other sites, surely these wonderful sites give enough capability to express an engineer's thoughts. And sure they have builtin features to help display code either generic markdown or custom tooling. Yet, why not give full reign to include anything in the HTML + CSS + TypeScript world. Basically limitless ways one with frontend knowledge could display <b>anything</b>. This blog post was made using React and JSX inline, allowing for anything possible to appended. Including react-code-blocks for syntax highlight of specific languages as shown below.
       </p>
-        <CodeBlock  language={"typescript"} code={`import  { CopyBlock, atomOneDark} from 'react-code-blocks';
+        <CodeBlock  language={"typescript"} code={`import { useTheme } from '@/hooks/useTheme';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { a11yDark} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { dark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import './code-block.css'
 
 type CodeBlockProps = {
   code: string;
@@ -28,14 +31,28 @@ type CodeBlockProps = {
   showLineNumbers?: boolean;
 }
 
-export function AtomCodeBlock({ code, language, showLineNumbers = false}: CodeBlockProps) {
-  <CopyBlock
-    text={code}
-    language={language}
-    showLineNumbers={showLineNumbers}
-    theme={atomOneDark}
-    codeBlock
-  />;
+
+export function CodeBlock({ code, language, showLineNumbers = false}: CodeBlockProps) {
+  const {theme} = useTheme();
+
+  return (
+    <div className="codeblock-container m-6 p-4 rounded-2xl w-fit max-w-full overflow-auto">
+      <SyntaxHighlighter 
+        language={language} 
+        style={theme === 'dark' ? a11yDark : dark} 
+        showLineNumbers={showLineNumbers}
+        wrapLines={true}
+        customStyle={{
+            borderRadius: '1rem',
+            padding: '1rem 2rem',
+            display: 'inline-block',
+          }}
+        >
+        {code}
+      </SyntaxHighlighter>
+    </div>
+  );
+
 }`} 
           />
       <h2>Decisions</h2>
