@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/chronicler-jacob-stafford.github.io/', // for GitHub Pages 
+  base: '/blog/', // for GitHub Pages 
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
