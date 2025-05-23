@@ -21,7 +21,7 @@ export default function BlogCard({ blog } : BlogCardProps) {
      hover:border-green-300 hover:scale-[1.02] 
       w-[300px]
       overflow-hidden p-0"
-    onClick={() => void navigate(`blog/${blog.id}`)}
+    onClick={() => void navigate(`/blog/blogs/${blog.id}`)}
   >
     <CardHeader className="flex flex-col gap-4 p-4 pb-2">
       <CardTitle>{blog.title}</CardTitle>

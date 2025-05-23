@@ -11,7 +11,7 @@ function App() {
       <PageWrapper>
           <Routes>
             <Route path="/blog/" element={<HomePage/>} />
-            <Route path="/blog/:blogId" element={<BlogPage/>} />
+            <Route path="/blog/blogs/:blogId" element={<BlogPage/>} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
       </PageWrapper>
