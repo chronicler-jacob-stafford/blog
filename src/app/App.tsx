@@ -10,7 +10,7 @@ function App() {
     <ThemeProvider>
       <PageWrapper>
           <Routes>
-            <Route path="/" element={<HomePage/>} />
+            <Route path="/blog/" element={<HomePage/>} />
             <Route path="/blog/:blogId" element={<BlogPage/>} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
