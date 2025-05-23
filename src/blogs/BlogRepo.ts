@@ -4,8 +4,6 @@ import creatingThisBlogSite from "@/blogs/CreatingThisBlogSite/CreatingThisBlogS
 
 const BlogRepo: Blog[] = [
   creatingThisBlogSite,
-  creatingThisBlogSite,
-  creatingThisBlogSite
 ];
 
 

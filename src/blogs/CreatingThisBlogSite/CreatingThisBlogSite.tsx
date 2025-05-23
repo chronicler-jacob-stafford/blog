@@ -3,7 +3,7 @@ import image from '@/assets/tailwind.jfif'
 import { CodeBlock } from "@/components/ui/code-block";
 
 const blog: Blog = {
-  title: 'This Blog Template (stafford-blog)',
+  title: 'Creating this site (stafford-blog)',
   imageUrl: image ,
   description: 'What motivated me to make this template and some of the decisions that were made while creating it.',
   id: '1',
@@ -19,18 +19,11 @@ function BlogPage() {
       <p> 
         I've always wanted a blog to ramble about the riff-raff of the full-stack experience. Why not simply post on LinkedIn, Medium, all the other sites, surely these wonderful sites give enough capability to express an engineer's thoughts. And sure they have builtin features to help display code either generic markdown or custom tooling. Yet, why not give full reign to include anything in the HTML + CSS + TypeScript world. Basically limitless ways one with frontend knowledge could display <b>anything</b>. This blog post was made using React and JSX inline, allowing for anything possible to appended. Including react-code-blocks for syntax highlight of specific languages as shown below.
       </p>
-        <CodeBlock  language={"typescript"} code={`import { useTheme } from '@/hooks/useTheme';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { a11yDark} from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { dark} from 'react-syntax-highlighter/dist/esm/styles/prism';
-import './code-block.css'
-
-type CodeBlockProps = {
+        <CodeBlock  language={"typescript"} code={`type CodeBlockProps = {
   code: string;
   language: string;
   showLineNumbers?: boolean;
 }
-
 
 export function CodeBlock({ code, language, showLineNumbers = false}: CodeBlockProps) {
   const {theme} = useTheme();
@@ -67,17 +60,15 @@ export function CodeBlock({ code, language, showLineNumbers = false}: CodeBlockP
       </p>
       <h3>TypeScript</h3>
       <p>
-        In any project, small or enormous, I'd always advise using TypeScript. Type safety enables pre-compilation features in editors that increases developer speed, reduction of bugs due to misstyping, and including the insidious undefined property bugs. Setting up Typescript properly with all the systems in a codebase can be a pain, e.g. linting, testing, transpilation, types the list goes on. Vite has made this process less painful, and the configuration in this template hopefully eases the pain of utilizing TypeScript.
+        In any frontend project, small or enormous, I'd always advise using TypeScript. Type safety enables pre-compilation features in editors that increases developer speed, reduction of bugs due to misstyping, and including the insidious undefined property bugs. Setting up Typescript properly with all the systems in a codebase can be a pain, e.g. linting, testing, transpilation, types the list goes on. Vite has made this process less painful, and the configuration in this template hopefully eases the pain of utilizing TypeScript.
       </p>
       <h3>React</h3>
       <p>
         React makes for an obvious choice. DOM manipulation simplified, JSX has powerful tooling, lifecycle hooks, and so forth. I don't really make it a point over similar frameworks, like Vue, especially now that Vue3 directly supports using TypeScript. At a certain point it's a matter of preference, both offer eerily similar capabilities and each have mostly menial painpoints the other may not have. Ultimately, the availability of React Snippets scattered across GitHub and blogs enables developers and LLM's to add custom features to the blog seemlessly.
       </p>
-
-      <h3>Template Usage Guide</h3>
+      <h3>Copyright</h3>
       <p>
-        The GitHub's readme goes into more details of using this template.
-        <a> GitHub</a>
+        Anyone may copy and redistribute this codebase. If you have any questions or suggestions, please reach out to me on GitHub issues.
       </p>
     </div>
   );
