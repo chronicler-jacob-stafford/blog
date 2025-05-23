@@ -9,7 +9,7 @@ const jobs: Job[] = [
     title: "Founder",
     company: "Chronicler",
     date: "07/24-04/25",
-    description: `Designed and developed Of Merchants and Monks prototype backpack-defense management, with emphasis on UI/UX and system design. Coordinated and collaborated with peers from diverse disciplines to refine the game vision and prototyping.`,
+    description: `Designed and developed Of Merchants and Monks prototype backpack-defense management, with emphasis on UI/UX and system design. Utilized the Godot engine with C#. Coordinated and collaborated with peers from diverse disciplines to refine the game vision and prototyping.`,
     tags: [
       "Godot",
       "C#",
