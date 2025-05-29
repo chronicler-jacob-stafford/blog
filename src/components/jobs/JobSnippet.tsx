@@ -6,7 +6,7 @@ export default function JobSnippet(props: Job) {
     const { title, date, description, tags, company, logo} = props;
 
     return (
-        <div className="flex  gap-2">
+        <div className="flex gap-2">
             <p className="align-top font-thin text-gray-500 text-xs">{date}</p>
 
             <div className="flex flex-col w-full gap-0">
@@ -16,14 +16,14 @@ export default function JobSnippet(props: Job) {
                         <h3>{company}</h3>    
                         <img
                             src={logo}
-                            className="h-[25px]"
+                            className="h-[25px] w-auto shrink-0"
                         />
                     </div>
                 </div>
 
-                <p>{description}</p>
+                <p className="whitespace-normal break-words w-auto">{description}</p>
 
-                <div className="flex gap-2 overflow-auto mt-6">
+                <div className="flex flex-wrap gap-2 mt-6">
                     {tags?.map((tag: string, i: number) => (
                         <Badge variant={i == 0 ? 'default' : 'secondary'} id={i.toString() }>
                             {tag}

@@ -6,9 +6,9 @@ import jobs from '@/components/jobs/Jobs';
 export default function HomePage() {
   return (
       <div className="flex flex-col gap-10 items-start">
-        <div className="flex flex-col md:flex-row justify-between gap-20 mt-5">
+        <div className="flex flex-col lg:flex-row justify-between gap-20 mt-5">
 
-          <div className="flex flex-col gap-3 ml-20 shrink-0 md:sticky md:top-5 md:self-start">
+          <div className="flex flex-col gap-3 ml-20 shrink-0 lg:sticky lg:top-5 lg:self-start">
             <h1 className="text-emerald-800">Jacob Stafford</h1>
             <h3 className=''>Full Stack Web & Cloud Engineer</h3>
             <p className='mt-[0px] ml-4 max-w-[300px]'> <i>I build user facing web applications, and keep them running in the cloud.</i></p>
@@ -33,11 +33,10 @@ export default function HomePage() {
           <div className='flex flex-col gap-10'>
             <section id="about" className="flex flex-col max-w-[600px] mr-10">
               <p>
-                I'm the dirty plumber of the software world. If some smelly code is blocking your pipes I can fix it. Leaky cache? I'll patch it up. New a whole new septic system, I've got you covered.
-                Don't worry, I'm stopping this plumber analogy here and now.
+                I'm the dirty plumber of the software world.
               </p>
               <p>
-                I have built systems across the stack, from DevOps (devboxes) to databases (furniture modeling schemas) to frontends (contact form). 
+                I have designed and built systems across the stack, from DevOps (devboxes) to databases (furniture modeling schemas) to frontends (contact form). 
                 I've worked predominantly in eCommerce, from B2B pages to B2C high-volume frontends, to internal tools and platforming. 
                 I've developed in a variety of languages, of recent note, TypeScript, a love that JavaScript could never amount to. When it comes to cloud platforms,
                 I have touched the holy trinity of the tech oligarchs, AWS, Azure, and GCP. Particularly <b className="text-emerald-800">AWS</b>.

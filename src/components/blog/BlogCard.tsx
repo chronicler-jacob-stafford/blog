@@ -25,7 +25,7 @@ export default function BlogCard({ blog } : BlogCardProps) {
   >
     <CardHeader className="flex flex-col gap-4 p-4 pb-2">
       <CardTitle>{blog.title}</CardTitle>
-      <div className="flex gap-2">
+      <div className="flex gap-2 overflow-auto">
         {
           blog.badges?.map((badge, i) => 
           <Badge key={badge} variant={i == 0 ? 'default' : 'secondary'}>{badge}</Badge>
